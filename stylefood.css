@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+     padding: 40px 5%;
+}
+
+.logo{
+    width: 50px;
+    padding: 25px;
+}
+.navbar{
+   
+  position: fixed;
+  display: flex;
+  position: relative;
+  z-index:1000;
+  align-items: center;
+  top: 0; left: 0 ; right: 0;
+  background-color: white;
+  
+}
+.navbar ul{
+    float: right;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+}
+.navbar ul a{
+    padding: 10px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    /* padding-right: 30px; */
+}
+.navbar ul a:hover{
+    color: red;
+    padding: 30px;
+}
+@media(max-width:800px){
+
+}
+.textup{
+    position: relative;
+    left: 10%;
+    margin-top: 20%;
+}
+
+.burger{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    animation: slide 5s linear infinite;
+    transform: translateY(30px);
+}
+
+@keyframes slide{
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.textup h1{
+  margin-bottom: 20px;  
+}
+.order{
+    position: absolute;
+    top: 120%;
+    border: 1px solid rgb(224, 12, 12);
+    text-decoration: none;
+    padding: 10px 10px;
+    color: rgb(224, 12, 12);
+    border-radius: 2em;
+    /* z-index: 0; */
+}
+.order::before{
+    content:"";
+    background: red;
+    /* z-index: -1; */
+    /* position: absolute ; */
+    /* transition: .3s linear; */
+}
+.order:hover{
+    background-color: blue;
+}
+.head{
+    background-color: white;
+    height: 100vh;
+}
+.head h1{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+ h1 span{
+    color: red;
+}
+.caton img{
+    width: 200px;
+}
+
+.head .dish{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.head .dish .burger1{
+    flex: 1 1 15rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,3);
+    cursor: pointer;
+    border-radius: .5rem;
+    box-shadow: 0.5px 1px  rgba(0,0,0,1);
+}
+.head .dish .burger1 .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: 5s;
+}
+.head .dish .burger1 .image,.caton{
+    text-align: center;
+    background: white;
+    /* padding: 5px; */
+}
+.head .dish .burger1 .image,.caton img{
+    margin: 1px;
+    /* width: 200px; */
+}
+.head .dish .burger1 .image,.caton h3{
+    color: red;
+    font-size: 2rem;
+}
+.head .dish .burger1 .image,.caton p{
+    color: #666;
+    /* padding: 1rem 0; */
+}
+.head .dish .burger1:hover .image{
+    top: 0;
+}
+.popular{
+    margin-top:  200px;
+
+
+}
+.popular h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.popular .food{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.popular .food .tasty{
+    flex: 1 1 15rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,3);
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0.5px 1px  rgba(0,0,0,1);
+}
+.btn{
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 10px;
+    color: red;
+    bottom: 2%;
+    left: 30%;
+    position: absolute;
+    border-top-right-radius: 30px ;
+    transition: .5s ease-in-out;
+}   
+.btn:hover{
+    background-color: blue;
+    border-top-right-radius: 0px;
+}
+.tasty p{
+    position: absolute;
+    left: 9%;
+    top: 3%;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.tasty img{
+    width: 90%;
+    height: 60%;
+    margin-bottom: 10px;
+}
+.rate{
+    width: 10px;
+   margin-bottom: 80px;
+}
+.work h1{
+  text-align: center; 
+  margin-top: 10px;
+
+}
+.steps{
+ display: flex;
+ text-align: center;
+ 
+    
+}
+.step img{
+  width: 50%;
+  border: 4px solid red;
+  border-radius: 50%;
+  margin-top: 20px;
+
+}
+.gallery h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery .menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.gallery .menu .dishs{
+    flex: 1 1 15rem;
+    overflow: hidden;
+    border: 1px solid white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0.5px 1px  white;
+}
+.gallery .menu .dishs img{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.remark h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.remark .review{
+    display: flex;
+    flex: wrap;
+    /* position: relative; */
+}
+.remark .review .name{
+    flex: 1 1 15rem;
+    position: relative;
+    z-index: -3;
+    overflow: hidden;
+    border: 1px solid white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: rgb(48, 42, 42);
+    box-shadow: 0.5px 1px  white;
+}
+.review .remarks{
+    margin-top: 50px;
+    position: relative;
+     top: -25%;
+    right: -230%;
+}
+.remarks{
+    width: 60px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.name h3{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.name img{
+    width: 70px;
+    position: absolute;
+    right: 40%;
+    top: 30%;
+    margin-top: 10px;
+}
+.name p{
+    padding: 10px;
+}
+
